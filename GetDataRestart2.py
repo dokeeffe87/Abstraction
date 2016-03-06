@@ -18,7 +18,6 @@ search_query = 'cat:hep-th' # search for hep-th as the primary category
 start = 0
 total_results = 50000
 results_per_iteration = 100
-#max_results = 3
 wait_time = 5
 #Initial file labeling variable
 starting = start
@@ -144,8 +143,7 @@ for i in range(start,total_results,results_per_iteration):
 			print('Got the data!')
 
 	#Now lets get all of this data into a pandas data frame for future convenience.
-	#df = pd.DataFrame({'Arxiv-id' : Arxiv_id_list, 'Title' : Title_list, 'PrimaryCat' : PrimaryCat_list, 'Authors' : Author_list, 'Affiliation' : AuthorAffiliation_list, 'PublishDates' : PublishDates_list, 'JournalRefs' : JournalRefs_list, 'AllCats' : AllCats_list, 'Abstract' : Abstract_list, 'AbstractPage' : AbsPage_list})
-
+	
 	metadata_dict = {'Arxiv-id' : Arxiv_id_list, 'Title' : Title_list, 'PrimaryCat' : PrimaryCat_list, 'Authors' : Author_list, 'Affiliation' : AuthorAffiliation_list, 'CitationNum' : CitationNum_list, 'PublishDates' : PublishDates_list, 'JournalRefs' : JournalRefs_list, 'AllCats' : AllCats_list, 'Abstract' : Abstract_list, 'AbstractPage' : AbsPage_list}
 
 	df = pd.DataFrame(dict([ (k,pd.Series(v)) for k,v in metadata_dict.items() ]))
