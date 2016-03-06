@@ -58,11 +58,6 @@ def RemoveLatex(Abstract):
 	#pieces as possible
 	#We made need to modify this a bit if we find that it's too restrictive.
 	#Accuracy would be better if I built in a list of common scientific abreviations...
-
-	#You know, I don't have to do this, two letter words are all stopwords anyway!
-	#Although see above comment.
-	#TwoLetterWords = ['it','at','do','go','to']
-	#allowed = ['gr', 'ns', 'ii', 'ia', 'ib', ']
 	
 	CleanOdd = []
 	for word in Abstract_lets:
